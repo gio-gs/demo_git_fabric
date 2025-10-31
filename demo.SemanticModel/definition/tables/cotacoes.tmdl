@@ -21,10 +21,10 @@ table cotacoes
 	column Cotacao
 		dataType: double
 		lineageTag: c06a0ba5-50c6-454a-ae5c-9854f989d018
-		summarizeBy: sum
+		summarizeBy: average
 		sourceColumn: Cotacao
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 

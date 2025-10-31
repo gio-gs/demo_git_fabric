@@ -30,7 +30,6 @@ annotation PBI_QueryOrder = ["base_transacoes","data_inicial","data_final","moed
 
 annotation PBI_ProTooling = ["DevMode"]
 
-ref table data_final
 ref table moedas
 ref table calendario
 ref table transacoes

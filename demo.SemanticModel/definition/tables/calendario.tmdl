@@ -1,8 +1,10 @@
 table calendario
 	lineageTag: 0f1fb3d6-1805-41ca-bed7-fa8d0f3b2b5f
+	dataCategory: Time
 
 	column Data
 		dataType: dateTime
+		isKey
 		formatString: Long Date
 		lineageTag: 353c0918-7073-4dec-b8be-862aa5d88e57
 		summarizeBy: none
