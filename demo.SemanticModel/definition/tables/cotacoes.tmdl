@@ -1,0 +1,69 @@
+table cotacoes
+	lineageTag: 05542515-f33c-421a-94c9-d99f08fe7f38
+
+	measure CotacaoDia = AVERAGE(cotacoes[Cotacao])
+		displayFolder: Medidas
+		lineageTag: 15a3933c-ef77-4911-aa95-97725b1b10a6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Moeda
+		dataType: string
+		displayFolder: Colunas
+		lineageTag: 4ca56c61-1abf-4f68-ad53-84bf1ba8bc9c
+		summarizeBy: none
+		sourceColumn: Moeda
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataHora
+		dataType: dateTime
+		formatString: General Date
+		displayFolder: Colunas
+		lineageTag: 310d56e1-fcaa-471c-b6e6-cdf26cad0ea0
+		summarizeBy: none
+		sourceColumn: DataHora
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cotacao
+		dataType: double
+		displayFolder: Colunas
+		lineageTag: c06a0ba5-50c6-454a-ae5c-9854f989d018
+		summarizeBy: average
+		sourceColumn: Cotacao
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TipoBoletim
+		dataType: string
+		displayFolder: Colunas
+		lineageTag: 3f672bdf-f3a8-440d-8080-274fc2debde9
+		summarizeBy: none
+		sourceColumn: TipoBoletim
+
+		annotation SummarizationSetBy = Automatic
+
+	column Data
+		dataType: dateTime
+		formatString: Long Date
+		displayFolder: Colunas
+		lineageTag: 3dbd93b5-8b12-49ea-9bd1-8cff6633082f
+		summarizeBy: none
+		sourceColumn: Data
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition cotacoes = m
+		mode: import
+		queryGroup: fatos
+		source = getCotacoes(data_inicial, data_final)
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
