@@ -4,4 +4,6 @@ Criaremos um projeto no Power BI completo e integraremos
 
 Depois faremos isso com o Fabric
 
-e ainda aplicarmeos com AzureDevOps!
+E ainda aplicarmeos com AzureDevOps!
+
+Aula: Git e GitHub para analise e engenheiro de dados com Fabric
